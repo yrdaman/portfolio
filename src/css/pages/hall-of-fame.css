@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Shippori Mincho', serif, system-ui;
+  background-color: #202125;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* =========================
+   HEADING (KEEP AS-IS)
+   ========================= */
+
+.heading {
+  position: relative;
+  margin: max(100px, 8vw) auto clamp(32px, 6vw, 48px);
+  min-height: clamp(100px, 20vw, 160px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 clamp(12px, 4vw, 32px);
+}
+
+.heading .content {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+.heading .content h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  font-size: clamp(1.8rem, 6vw, 5.5rem);
+  font-weight: 800;
+  letter-spacing: clamp(2px, 0.3vw, 6px);
+  white-space: nowrap;
+  color: transparent;
+  -webkit-text-stroke: clamp(1px, 0.2vw, 3px) #000;
+}
+
+.heading .content h2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  font-size: clamp(1.8rem, 6vw, 5.5rem);
+  font-weight: 800;
+  letter-spacing: clamp(2px, 0.3vw, 6px);
+  white-space: nowrap;
+  color: #000;
+  animation: wave 4s ease-in-out infinite;
+}
+
+@keyframes wave {
+
+  0%,
+  100% {
+    clip-path: polygon(0% 45%, 16% 44%, 33% 50%, 54% 60%, 70% 61%, 84% 59%, 100% 52%,
+        100% 100%, 0% 100%);
+  }
+
+  50% {
+    clip-path: polygon(0% 60%, 15% 65%, 34% 66%, 51% 62%, 67% 50%, 84% 45%, 100% 46%,
+        100% 100%, 0% 100%);
+  }
+}
+
+/* =========================
+   CERTIFICATE GRID
+   ========================= */
+
+.gallery-image {
+  padding: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  flex: 1;
+  width: 100%;
+
+}
+
+/* =========================
+   CERTIFICATE CARD
+   ========================= */
+
+.img-box {
+  width: 350px;
+  max-width: 100%;
+  height: 250px;
+  overflow: hidden;
+  position: relative;
+  background: #f5f5f5;
+  border-radius: 1px;
+
+  /* PROFESSIONAL HOVER BEHAVIOR */
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.img-box:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.462);
+  cursor: pointer;
+}
+
+/* =========================
+   CERTIFICATE IMAGE
+   ========================= */
+
+.gallery-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  display: block;
+  transition: transform 0.35s ease;
+}
+
+.img-box:hover {
+  transform: scale(1.09);
+}
+
+/* =========================
+   OVERLAY
+   ========================= */
+
+.transparent-box {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0);
+  transition: background 0.3s ease;
+
+}
+
+.img-box:hover .transparent-box {
+  background: rgba(255, 255, 255, 0.09);
+}
+
+/* =========================
+   CAPTION
+   ========================= */
+
+.caption {
+  position: absolute;
+  bottom: 12px;
+  left: 16px;
+  right: 16px;
+  color: #000000;
+  opacity: 0;
+  transform: translateY(4px);
+  transition: opacity 0.25s ease, transform 0.25s ease;
+  background-color: rgba(0, 0, 0, 0.10);
+  backdrop-filter: blur(2px);
+  padding: 8px 12px;
+  border-radius: 4px;
+}
+
+.img-box:hover .caption {
+  opacity: 1;
+  transform: translateY(0);
+
+}
+
+.caption p {
+  margin: 0;
+  font-size: 0.85rem;
+
+}
+
+.caption p:nth-child(2) {
+  font-size: 0.75rem;
+  opacity: 0.8;
+}
+
+/* =========================
+   RESPONSIVE
+   ========================= */
+
+@media (max-width: 480px) {
+  .gallery-image {
+    padding: 12px;
+    gap: 12px;
+  }
+
+  .img-box {
+    width: 100%;
+
+
+    html {
+      height: 100%;
+    }
+
+    height: auto;
+    aspect-ratio: 4 / 3;
+  }
+}

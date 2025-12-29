@@ -1,0 +1,75 @@
+/* KEYFRAMES */
+@keyframes bw-gradient-flow {
+    0% {
+         background-position: 0% 50%;
+    }
+    100% { 
+        background-position: 100% 50%; 
+    }
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+@keyframes wiggle {
+    0%, 100% { transform: rotate(0deg); }
+    25% { transform: rotate(-180deg); }
+    75% { transform: rotate(180deg); }
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+/* Floating Animation (Moved from HTML) */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+/* Line Pulse Animation (Moved from HTML) */
+@keyframes pulseLine {
+  0% { background-position: 0% 0%; }
+  100% { background-position: 0% 100%; }
+}
+.animate-pulseLine {
+  background-size: 100% 200%;
+  background-repeat: no-repeat;
+  animation: pulseLine 3s linear infinite;
+}
+
+/* ANIMATION CLASSES */
+.gradient-text-animate {
+    background: linear-gradient(270deg, #000, #888, #fff, #888, #000);
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    animation: bw-gradient-flow 3s linear infinite;
+    text-shadow: 1px 1px 0 #000;
+}
+
+#draggableContainer figure {
+    animation: float 4s ease-in-out infinite;
+}
+
+.game-icon:hover {
+    animation: wiggle 0.5s ease infinite;
+}
+
+#typing::after {
+    content: "_";
+    animation: blink 1s infinite;
+    opacity: 1;
+}
+
+.about-reveal {
+    transition: filter 0.3s;
+}

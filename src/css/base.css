@@ -1,0 +1,78 @@
+/* RESET & BASIC TYPOGRAPHY */
+body {
+    font-family: 'Shippori Mincho', serif, system-ui;
+    scroll-behavior: smooth;
+    background: linear-gradient(135deg, #f5f5f5 0%, #e0e0e0 100%);
+    color: #000;
+    overflow: hidden;
+    background-color: #212121;
+    text-align: center;
+}
+
+
+
+/* SCROLLBAR & TEXT SIZE ADJUST */
+html {
+  overflow-y: auto;
+  /* Prevent automatic text-size changes on mobile browsers */
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  scrollbar-width: none;        /* Firefox hide bar */
+  -ms-overflow-style: none;     /* IE/Edge hide bar */
+}
+
+html::-webkit-scrollbar {
+  width: 0 !important;
+  height: 0 !important;
+  background: transparent;
+}
+
+.header-text {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Add to base.css or components.css */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+
+/* Icon Scaling */
+.icon {
+    font-size: 1em; /* Scale icons with text */
+    width: 1em; /* Ensure width is proportional */
+    height: 1em; /* Ensure height is proportional */
+}
+
+
+
+
+
+.backdrop-blur-md {
+  /* Safari requires the -webkit- prefix */
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  transform: translateZ(0);
+}
+.backdrop-blur-sm {
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(8px);
+  transform: translateZ(0);
+}
+
+/* WebKit scrollbar hide fallback for Safari (does not support scrollbar-width) */
+html::-webkit-scrollbar {
+  width: 0 !important;
+  height: 0 !important;
+  background: transparent;
+}

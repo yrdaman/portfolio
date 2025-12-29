@@ -1,0 +1,123 @@
+/* SECTIONS & HERO */
+.hero,
+.section {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    box-sizing: border-box;
+}
+
+/* NAVBAR STYLES */
+#mainNav {
+    background-color: rgba(255, 255, 255, 0.1);
+    /* Fallback: translucent before Tailwind loads */
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    transform: translateY(0);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px);
+    will-change: transform;
+}
+
+/* Mobile Sidebar */
+#mobileSidebar {
+    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px);
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    will-change: transform;
+}
+
+#mobileSidebar.active {
+    transform: translateX(0);
+}
+
+#sidebarOverlay {
+    display: none;
+}
+
+#sidebarOverlay.active {
+    display: block;
+}
+
+/* Mobile Hamburger Button Styling */
+#mobileMenuToggle {
+    color: inherit;
+    stroke: currentColor;
+}
+
+#mobileMenuToggle:hover {
+    color: #60a5fa;
+    /* Blue on hover */
+}
+
+#mobileMenuToggle.active {
+    color: #60a5fa;
+    /* Keep blue when active */
+}
+
+#mobileMenuToggle svg {
+    stroke: currentColor;
+}
+
+.nav-links a {
+    position: relative;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background-color: currentColor;
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+/* FOOTER */
+footer {
+    background-color: rgba(0, 0, 0, 0.8);
+    /* HARD fallback */
+    background: rgba(0, 0, 0, 0.9) !important;
+    color: #ffffff !important;
+    padding: 1rem;
+    width: 100%;
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+.buy-coffee-btn .full-text {
+    display: none;
+}
+
+.buy-coffee-btn .short-text {
+    display: inline;
+}
+
+/* Ensure desktop nav links are hidden on mobile */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none !important;
+    }
+
+    #mobileMenuToggle {
+        color: currentColor;
+    }
+}
+
+@media (min-width: 769px) {
+
+    #mobileMenuToggle,
+    #mobileSidebar,
+    #sidebarOverlay {
+        display: none !important;
+    }
+}

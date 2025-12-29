@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="description"
+    content="Portfolio of Rakesh Daman, a Python backend developer with a strong focus on data science and machine learning. Explore my projects, skills, and journey." />
+  <meta name="author" content="Rakesh Daman" />
+  <meta property="og:title" content="Rakesh Daman – Python Backend | Data & ML Focus" />
+  <meta property="og:description"
+    content="Python backend developer focused on data science and machine learning. View projects, skills, and experience." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://yrdaman.github.io/" />
+  <meta property="og:image" content="https://yrdaman.github.io/img/Rakesh_Daman.png" />
+  <meta property="og:image:alt" content="Rakesh Daman profile picture" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Rakesh Daman" />
+  <meta name="twitter:description"
+    content="Portfolio of Rakesh Daman (yrdaman), showcasing web development, Python, Java, and data science projects." />
+  <meta name="twitter:image" content="https://yrdaman.github.io/img/Rakesh_Daman.png" />
+  <meta name="twitter:image:alt" content="Rakesh Daman profile picture" />
+  <link rel="og:url" href="https://yrdaman.github.io/" />
+  <script>
+    // Ensure browser does not auto-restore scroll before our scripts run
+    if ('scrollRestoration' in history) {
+      history.scrollRestoration = 'manual';
+    }
+  </script>
+  <title>Rakesh Daman</title>
+  <!-- Favicon - Multiple formats for all browsers -->
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicons/yrdaman-32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicons/yrdaman-16.png" />
+  <link rel="icon" type="image/png" sizes="48x48" href="/favicons/yrdaman-48.png" />
+
+  <!-- Apple Touch Icon (iOS home screen) -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png" />
+
+  <!-- Android Chrome -->
+  <link rel="icon" type="image/png" sizes="192x192" href="/favicons/yrdaman-192.png" />
+  <link rel="icon" type="image/png" sizes="512x512" href="/favicons/yrdaman-512.png" />
+
+  <!-- Safari Pinned Tab (SVG for macOS) -->
+  <link rel="mask-icon" href="/favicons/yrdaman.svg" color="#000000" />
+
+  <!-- Theme color for browser chrome -->
+  <meta name="theme-color" content="#212121" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho&display=swap" rel="stylesheet">
+
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- Critical CSS: load before first paint to avoid flash -->
+  <link rel="stylesheet" href="/src/css/main.css" />
+  <link rel="stylesheet" href="/src/css/base.css" />
+  <link rel="stylesheet" href="/src/css/layout.css" />
+  <link rel="stylesheet" href="/src/css/components.css" />
+  <link rel="stylesheet" href="/src/css/animations.css" />
+  <link rel="stylesheet" href="/src/css/theme.css" />
+
+</head>
+
+<body class="min-h-screen">
+
+  <div id="preloader">
+    <img src="/img/cool-animation.gif" alt="Loading..." />
+  </div>
+
+
+  <!-- your portfolio sections go here -->
+
+  <!-- Navigation Bar -->
+  <nav id="mainNav"
+    class="fixed top-0 left-0 w-full transition-transform duration-300 bg-white/10 backdrop-blur-md z-50 py-4 px-6">
+    <div class="container mx-auto flex justify-between items-center">
+      <!-- Mobile Hamburger Button (Left Side) -->
+      <button id="mobileMenuToggle" class="md:hidden p-2 rounded-full hover:text-blue-400 transition-colors"
+        aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobileSidebar">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+
+      <a href="#" class="text-xl font-bold tracking-wider">Rakesh Daman</a>
+
+      <!-- Desktop Navigation Links -->
+      <div class="nav-links hidden md:flex items-center gap-6">
+        <a href="#hero" class="hover:text-blue-400 transition-colors">Home</a>
+        <a href="#about" class="hover:text-blue-400 transition-colors">My Journey</a>
+        <a href="#projects" class="hover:text-blue-400 transition-colors">Builds</a>
+        <a href="#skills" class="hover:text-blue-400 transition-colors">Skills</a>
+        <a href="/hall-of-fame.html" class="hover:text-blue-400 transition-colors">Hall of Fame</a>
+        <a href="#contact" class="hover:text-blue-400 transition-colors">Contact</a>
+        <a href="/docs/resume.pdf" class="resume-link hover:text-blue-400 transition-colors">Resume</a>
+
+        <button id="themeToggle" class="p-2 rounded-full hover:text-blue-400 transition-colors"
+          aria-label="Toggle dark mode">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+          </svg>
+        </button>
+        <a href="https://yrdaman.github.io/spacefolio007/spacegame/test.html" target="_blank"
+          class="game-icon p-2 hover:text-blue-400 transition-colors" aria-label="Play space game">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M15 5v2m0 4v2m0 4v2M5 5a2 2 0 00-2 2v3a2 2 0 110 4v3a2 2 0 002 2h14a2 2 0 002-2v-3a2 2 0 110-4V7a2 2 0 00-2-2H5z">
+            </path>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Sidebar Navigation -->
+  <aside id="mobileSidebar"
+    class="fixed left-0 top-0 h-full w-64 bg-white-10 backdrop-blur-md transform -translate-x-full transition-transform duration-300 z-40 md:hidden">
+    <div class="flex flex-col h-full pt-20 px-6 pb-6">
+      <nav class="flex flex-col gap-4 flex-1">
+        <a href="#hero" class="hover:text-blue-400 transition-colors py-2">Home</a>
+        <a href="#about" class="hover:text-blue-400 transition-colors py-2">My Journey</a>
+        <a href="#projects" class="hover:text-blue-400 transition-colors py-2">Builds</a>
+        <a href="#skills" class="hover:text-blue-400 transition-colors py-2">Skills</a>
+        <a href="/hall-of-fame.html" class="hover:text-blue-400 transition-colors py-2">Hall of Fame</a>
+        <a href="#contact" class="hover:text-blue-400 transition-colors py-2">Contact</a>
+        <a href="/docs/resume.pdf" class="resume-link hover:text-blue-400 transition-colors py-2">Resume</a>
+      </nav>
+
+      <div class="flex gap-4 pt-4 border-t border-gray-700">
+        <button id="mobileThemeToggle" class="p-2 rounded-full hover:text-blue-400 transition-colors"
+          aria-label="Toggle dark mode">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+          </svg>
+        </button>
+        <a href="https://yrdaman.github.io/spacefolio007/spacegame/test.html" target="_blank"
+          class="game-icon p-2 hover:text-blue-400 transition-colors" aria-label="Play space game">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M15 5v2m0 4v2m0 4v2M5 5a2 2 0 00-2 2v3a2 2 0 110 4v3a2 2 0 002 2h14a2 2 0 002-2v-3a2 2 0 110-4V7a2 2 0 00-2-2H5z">
+            </path>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Mobile Sidebar Overlay (closes sidebar when clicked) -->
+  <div id="sidebarOverlay" class="fixed inset-0 bg-opacity-50 z-30 md:hidden" aria-hidden="true"></div>
+
+  <!-- HERO SECTION -->
+  <section id="hero" class="hero text-center">
+    <h1 class="header-text text-5xl md:text-6xl font-bold tracking-widest text-grey glow-link">Rakesh Daman</h1>
+    <h2 id="typing" class="header-text text-xl text-black-400 italic mt-4">
+
+    </h2>
+
+
+  </section>
+
+  <!-- ABOUT & JOURNEY COMBINED -->
+  <section id="about" class="section py-12 max-w-6xl mx-auto px-4">
+    <h2 class="text-3xl font-semibold mb-12 text-center">My Journey</h2>
+    <div class="about-journey-container grid grid-cols-1 lg:grid-cols-2 gap-4">
+
+
+      <!-- Left Side: About (70%) -->
+      <div class="lg:col-span-1 about-content space-y-6">
+        <div id="about-text" class="space-y-4">
+          <!-- Rendered via JS -->
+        </div>
+      </div>
+
+      <!-- Right Side: Timeline (30%) -->
+      <div class="lg:col-span-1 timeline-content">
+        <div id="timeline-cards" class="timeline-cards-vertical space-y-4">
+          <!-- Rendered via JS -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="section py-12">
+    <h2 class="text-3xl font-semibold mb-8 text-center">Builds</h2>
+
+    <div id="projects-grid" class="grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto px-6">
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" class="max-w-6xl mx-auto p-6">
+    <h2 class="text-3xl font-semibold text-center text-black mb-6">Skills</h2>
+    <div id="skills-grid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mt-8">
+      <!-- js code here -->
+    </div>
+
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section flex justify-center items-center min-h-screen ">
+    <div class="relative rounded-xl shadow-lg  p-8 max-w-4xl w-full grid grid-cols-1 md:grid-cols-2 gap-8"
+      style="background-color: rgb(215, 214, 219);">
+      <!-- Contact Form -->
+      <div class="flex flex-col justify-center">
+        <h2 class="text-3xl font-semibold mb-6 text-center md:text-left">Contact</h2>
+        <form class="space-y-4" id="contactForm">
+
+
+          <label for="name" class="sr-only"></label>
+          <input type="text" id="name" autocomplete="name"
+            class="w-full p-3 text-black rounded border border-black focus:outline-none focus:ring-2 focus:ring-blue-500"
+            placeholder="Your Name" required aria-required="true" />
+
+          <label for="email" class="sr-only">Your Email</label>
+          <input type="email" id="email" autocomplete="email"
+            class="w-full p-3 text-black rounded border border-black focus:outline-none focus:ring-2 focus:ring-blue-500"
+            placeholder="Your Email" required aria-required="true" />
+
+          <label for="message" class="sr-only">Your Message</label>
+          <textarea id="message" autocomplete="off"
+            class="w-full p-3 text-black rounded border border-black focus:outline-none focus:ring-2 focus:ring-blue-500"
+            rows="4" placeholder="Your Message" required aria-required="true"></textarea>
+
+          <button id="contactSubmit" type="submit"
+            class="px-4 py-2 bg-blue-700 hover:bg-blue-600 rounded text-white border-black w-15 ">
+            Send
+          </button>
+        </form>
+      </div>
+      <!-- Quote Randomizer -->
+      <div id="quoteBox" class="mb-4 mt-40 p-4  rounded text-gray-800 max-w-auto h-20 text-sm font-medium"
+        aria-live="polite"></div>
+
+
+      <div class="absolute bottom-0 right-0 ">
+        <img src="/img/obito.png" alt="Decorative anime character illustration in contact section"
+          class="w-32 h-32 md:w-48 md:h-48 object-contain rounded-lg pointer-events-none " loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer relative text-center text-white font-bold italic text-sm py-6">
+    <div class="footer-content">
+      <p class="px-2 py-1 rounded transition duration-300">
+        © 2025 Rakesh Daman AKA yrdaman. All rights reserved.
+      </p>
+    </div>
+
+    <!-- Floating CTA -->
+    <div class="footer-cta fixed bottom-5 right-5 z-50">
+      <a href="https://yrdaman.github.io/pillcoffee.dev/" target="_blank" rel="noopener noreferrer"
+        class="footer-cta-btn bg-yellow-400 hover:bg-yellow-500 text-black font-bold py-3 px-4 rounded-full shadow-lg flex items-center gap-2 transition-transform hover:scale-110">
+
+        <i class="fa-solid fa-mug-hot"></i>
+        <span class="full-text">Buy Me a Coffee</span>
+        <span class="short-text">Buy</span>
+      </a>
+    </div>
+  </footer>
+
+
+  <!-- Draggable Social Media Icons -->
+  <div id="draggableContainer" class="fixed z-50 cursor-grab" style="top: 75%; left: 80%;" data-mobile-bottom>
+
+    <figure class="snip1578">
+      <img src="/img/yrdaman.png" class="mx-auto w-16 h-16 rounded-full object-cover"
+        alt="Rakesh Daman (yrdaman) profile avatar" loading="lazy" />
+      <figcaption class="text-center">
+        <h3 class="text-sm -mt-2" style="font-weight: 800 !important;">@yrdaman</h3>
+        <div class="icons flex justify-center translate-x-4 gap-1 mt-2 text-xl">
+          <a href="https://github.com/yrdaman" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+            <i class="fa-brands fa-github text-gray-600 hover:text-gray-800"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/rakesh-daman-yelakanti-987b68217/" target="_blank"
+            rel="noopener noreferrer" aria-label="LinkedIn">
+            <i class="fa-brands fa-linkedin-in text-gray-600 hover:text-blue-700"></i>
+          </a>
+          <a href="https://medium.com/@yrdaman196" target="_blank" rel="noopener noreferrer" aria-label="Medium">
+            <i class="fa-brands fa-medium text-gray-600 hover:text-black"></i>
+          </a>
+          <a href="https://www.instagram.com/yrdaman" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <i
+              class="fa-brands fa-instagram text-gray-600 hover:bg-gradient-to-tr hover:from-yellow-400 hover:via-pink-500 hover:to-purple-600 hover:bg-clip-text hover:text-transparent"></i>
+          </a>
+        </div>
+      </figcaption>
+    </figure>
+
+  </div>
+
+  <!-- Resume Fullscreen Overlay (Light Blur) -->
+  <div id="resumeOverlay" class="hidden fixed inset-0 backdrop-blur-xl z-[9999] overflow-y-auto"
+    style="background: rgba(255, 255, 255, 0.4);">
+    <!-- Images Container -->
+    <div class="flex flex-col items-center justify-center py-20 min-h-screen">
+      <img src="/docs/resume-preview-1.png" alt="Resume Page 1"
+        class="max-w-3xl w-11/12 h-auto mb-12 rounded-lg shadow-2xl">
+      <img src="/docs/resume-preview-2.png" alt="Resume Page 2"
+        class="max-w-3xl w-11/12 h-auto mb-12 rounded-lg shadow-2xl">
+    </div>
+  </div>
+
+  <!-- Floating Controls (Top-Right - Fixed Outside Scrollable Area) -->
+  <div id="resumeControls" class="hidden fixed top-8 right-8 flex gap-8 z-[10001]">
+    <!-- Download Button (Nav Link Style) -->
+    <a href="/docs/resume.pdf" download
+      class="hover:text-blue-400 transition-colors text-gray-900 font-medium text-sm flex items-center gap-2">
+      <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+          d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+      </svg>
+      Download
+    </a>
+    <!-- Close Button (X - Text Style) -->
+    <button id="resumeOverlayClose" class="hover:text-blue-400 transition-colors text-gray-900 font-bold text-2xl"
+      aria-label="Close resume">✕</button>
+  </div>
+
+  <!-- Scripts -->
+  <script type="module" src="/src/js/main.js"></script>
+</body>
+
+</html>
