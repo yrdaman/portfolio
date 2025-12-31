@@ -105,27 +105,27 @@ export function initContactAnimation() {
 }
 
 export function initFooterAnimation() {
-  // Ensure footer is normal on load
-  gsap.set("footer", { clearProps: "transform,opacity" });
-
-  ScrollTrigger.create({
-    trigger: "footer",
-    start: "top 95%",
-    once: true,
-    onEnter: () => {
-      gsap.fromTo(
-        "footer",
-        { y: 50, opacity: 0 },
-        {
-          y: 0,
-          opacity: 1,
-          duration: 1,
-          ease: "power2.out",
-          clearProps: "transform"
+    ScrollTrigger.create({
+        trigger: "footer",
+        start: "top bottom",
+        once: true,
+        onEnter: () => {
+            gsap.fromTo(
+                "footer",
+                { y: 50, opacity: 0 },
+                {
+                    y: 0,
+                    opacity: 1,
+                    duration: 1,
+                    ease: "power2.out",
+                    clearProps: "transform,opacity",
+                    onComplete: () => {
+                        document.querySelector("footer").classList.add("animated");
+                    }
+                }
+            );
         }
-      );
-    }
-  });
+    });
 }
 
 
