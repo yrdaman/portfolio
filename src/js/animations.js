@@ -105,14 +105,29 @@ export function initContactAnimation() {
 }
 
 export function initFooterAnimation() {
-    // Animate footer when scrolled into view
-    gsap.from("footer", {
-        y: 50,
-        duration: 1,
-        ease: "power2.out",
-        scrollTrigger: { trigger: "footer", start: "top 90%" },
-    });
+  // Ensure footer is normal on load
+  gsap.set("footer", { clearProps: "transform,opacity" });
+
+  ScrollTrigger.create({
+    trigger: "footer",
+    start: "top 95%",
+    once: true,
+    onEnter: () => {
+      gsap.fromTo(
+        "footer",
+        { y: 50, opacity: 0 },
+        {
+          y: 0,
+          opacity: 1,
+          duration: 1,
+          ease: "power2.out",
+          clearProps: "transform"
+        }
+      );
+    }
+  });
 }
+
 
 
 // ==============================================

@@ -97,6 +97,7 @@ function initResumeOverlay() {
   });
 }
 
+
 // Block right-click & dev tools shortcuts (as requested)
 // Note: client-side prevention can be bypassed by determined users.
 document.addEventListener("contextmenu", e => e.preventDefault());
@@ -121,7 +122,6 @@ if ('scrollRestoration' in window.history) {
 // 4. PRELOADER (Must run immediately)
 // ==========================================
 initPreloader();
-
 // ==========================================
 // 5. DOM READY - INITIALIZATION
 // ==========================================
@@ -179,4 +179,5 @@ document.addEventListener('DOMContentLoaded', () => {
   initEmailForm();
   initThemeToggle();
   initResumeOverlay();
+  
 });

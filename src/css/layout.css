@@ -92,6 +92,66 @@ footer {
     width: 100%;
     opacity: 1 !important;
     visibility: visible !important;
+    position: relative;
+    z-index: 10;
+}
+
+/* Override padding - change from 1.5rem to 1rem */
+.py-6 {
+    padding-top: 1rem !important;
+    padding-bottom: 1rem !important;
+}
+
+/* Footer Wrapper: Container with flex layout */
+.footer-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+/* Footer Sections: Center (copyright) and Right (CTA) */
+.footer-section {
+    display: flex;
+    align-items: center;
+}
+
+/* Copyright Section - Truly centered in footer */
+.footer-content {
+    flex: 1;
+    text-align: center;
+    font-weight: bold;
+    font-style: italic;
+}
+
+/* CTA Section - Totally on the right */
+.footer-cta {
+    flex-shrink: 0;
+    position: static;
+    padding: 0;
+    z-index: auto;
+    text-align: right;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .footer-wrapper {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        text-align: center;
+    }
+
+    .footer-content {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .footer-cta {
+        justify-content: center;
+        text-align: center;
+    }
 }
 
 .buy-coffee-btn .full-text {

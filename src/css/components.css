@@ -493,8 +493,11 @@
         bottom: 2rem;
         transform: translateX(-50%);
     }
+}
 
-    /* CTA Button: Show short text, hide full text on mobile */
+@media (max-width: 768px) {
+
+    /* CTA Button: Show short text on mobile */
     .footer-cta-btn .full-text {
         display: none;
     }
@@ -504,9 +507,9 @@
     }
 }
 
-@media (min-width: 641px) {
+@media (min-width: 769px) {
 
-    /* CTA Button: Show full text, hide short text on desktop */
+    /* CTA Button: Show full text on desktop */
     .footer-cta-btn .full-text {
         display: inline;
     }
@@ -530,5 +533,5 @@
         margin-top: 1rem !important;
         margin-bottom: 5rem !important;
     }
-   
+
 }
